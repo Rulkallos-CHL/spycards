@@ -1,13 +1,7 @@
 :root{
-  --bg:#0f1720;
-  --panel:#0b1220;
-  --accent:#1f8feb;
-  --muted:#94a3b8;
-  --card:#0b1520;
-  --white:#eef2ff;
+  --bg:#071827; --panel:#0b1220; --accent:#1f8feb; --muted:#94a3b8; --white:#eef2ff;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
-
 *{box-sizing:border-box}
 html,body,#app{height:100%;margin:0;background:linear-gradient(180deg,#071021 0%, #071827 100%);color:var(--white)}
 #app{display:flex;flex-direction:column;height:100vh;padding:12px}
@@ -26,14 +20,10 @@ html,body,#app{height:100%;margin:0;background:linear-gradient(180deg,#071021 0%
 .topbar .left, .topbar .center, .topbar .right{display:flex;align-items:center;gap:12px}
 .topbar .brand{font-weight:700;font-size:18px}
 .topbar .coin{background:linear-gradient(90deg,#ffe07a,#ffb86b);color:#081018;padding:6px 10px;border-radius:6px;font-weight:700}
+.topbar .return{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:6px 10px;border-radius:6px;cursor:pointer;color:var(--white)}
 
 /* Main area: 90% height */
-.main{
-  height:90%;
-  margin-top:12px;
-  display:flex;
-  gap:12px;
-}
+.main{height:90%;margin-top:12px;display:flex;gap:12px;}
 
 /* Left controls column for title state (40% width) */
 .leftcol{
@@ -63,32 +53,28 @@ html,body,#app{height:100%;margin:0;background:linear-gradient(180deg,#071021 0%
 .btn{padding:10px 14px;border-radius:8px;border:none;cursor:pointer;background:var(--accent);color:white;font-weight:600}
 .small{font-size:13px;color:var(--muted)}
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-}
-.card{
-  background:linear-gradient(180deg,#071827 0%, #0b2a3a 100%);
-  border-radius:8px;padding:10px;border:1px solid rgba(255,255,255,0.03);text-align:center;
-}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.card{background:linear-gradient(180deg,#071827 0%, #0b2a3a 100%);border-radius:8px;padding:10px;border:1px solid rgba(255,255,255,0.03);text-align:center}
 
 /* Decks modify layout */
-.decks-modify{
-  display:flex;height:100%;
-  gap:12px;
-}
+.decks-modify{display:flex;height:100%;gap:12px}
 .left-cards{width:75%;overflow:auto;padding:8px}
 .right-deck{width:25%;overflow:auto;padding:8px;background:rgba(255,255,255,0.02);border-radius:8px}
 
 /* Store layout */
-.store-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:8px;overflow:auto;height:100%
-}
+.store-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:8px;overflow:auto;height:100%}
+
+/* Game board */
+.game-container{display:flex;flex-direction:column;height:100%;gap:12px}
+.board{flex:1;background:rgba(255,255,255,0.02);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.row{display:flex;gap:8px;align-items:center;justify-content:center}
+.cell{flex:1;background:linear-gradient(0deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));border-radius:6px;padding:6px;min-height:70px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.unit{background:rgba(255,255,255,0.03);padding:6px;border-radius:6px;text-align:center;width:100%}
+.controls{display:flex;gap:8px;align-items:center;margin-top:8px}
 
 /* modal */
 .modal-backdrop{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:50}
 .modal{background:#071827;padding:18px;border-radius:10px;width:420px;border:1px solid rgba(255,255,255,0.04)}
 
-/* bottom-right timer for matching */
+/* matching */
 .matching-timer{position:fixed;right:20px;bottom:20px;background:rgba(255,255,255,0.03);padding:10px;border-radius:8px}
