@@ -1,0 +1,94 @@
+:root{
+  --bg:#0f1720;
+  --panel:#0b1220;
+  --accent:#1f8feb;
+  --muted:#94a3b8;
+  --card:#0b1520;
+  --white:#eef2ff;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body,#app{height:100%;margin:0;background:linear-gradient(180deg,#071021 0%, #071827 100%);color:var(--white)}
+#app{display:flex;flex-direction:column;height:100vh;padding:12px}
+
+/* Top Bar: 10% height */
+.topbar{
+  height:10%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:8px 16px;
+  background:rgba(255,255,255,0.02);
+  border-radius:8px;
+}
+.topbar .left, .topbar .center, .topbar .right{display:flex;align-items:center;gap:12px}
+.topbar .brand{font-weight:700;font-size:18px}
+.topbar .coin{background:linear-gradient(90deg,#ffe07a,#ffb86b);color:#081018;padding:6px 10px;border-radius:6px;font-weight:700}
+
+/* Main area: 90% height */
+.main{
+  height:90%;
+  margin-top:12px;
+  display:flex;
+  gap:12px;
+}
+
+/* Left controls column for title state (40% width) */
+.leftcol{
+  width:40%;
+  background:rgba(255,255,255,0.02);
+  border-radius:8px;padding:16px;display:flex;flex-direction:column;height:100%;
+}
+.leftcol .menu-button{
+  background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:8px;margin-bottom:10px;color:var(--white);cursor:pointer;text-align:left
+}
+
+/* Right ad column 60% width */
+.rightcol{
+  width:60%;
+  height:100%;
+  background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  border-radius:8px;padding:16px;display:flex;align-items:center;justify-content:center;
+}
+.adimg{max-width:100%;max-height:100%;object-fit:contain;}
+
+/* Login form center */
+.loginbox{
+  margin:auto;
+  width:420px;background:rgba(0,0,0,0.35);padding:20px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);
+}
+.input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--white);margin-bottom:10px}
+.btn{padding:10px 14px;border-radius:8px;border:none;cursor:pointer;background:var(--accent);color:white;font-weight:600}
+.small{font-size:13px;color:var(--muted)}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+.card{
+  background:linear-gradient(180deg,#071827 0%, #0b2a3a 100%);
+  border-radius:8px;padding:10px;border:1px solid rgba(255,255,255,0.03);text-align:center;
+}
+
+/* Decks modify layout */
+.decks-modify{
+  display:flex;height:100%;
+  gap:12px;
+}
+.left-cards{width:75%;overflow:auto;padding:8px}
+.right-deck{width:25%;overflow:auto;padding:8px;background:rgba(255,255,255,0.02);border-radius:8px}
+
+/* Store layout */
+.store-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:8px;overflow:auto;height:100%
+}
+
+/* modal */
+.modal-backdrop{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:50}
+.modal{background:#071827;padding:18px;border-radius:10px;width:420px;border:1px solid rgba(255,255,255,0.04)}
+
+/* bottom-right timer for matching */
+.matching-timer{position:fixed;right:20px;bottom:20px;background:rgba(255,255,255,0.03);padding:10px;border-radius:8px}

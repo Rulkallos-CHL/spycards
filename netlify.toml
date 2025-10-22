@@ -1,0 +1,8 @@
+# netlify.toml - simple config for static site + functions (optional)
+[build]
+  publish = "."
+  command = ""
+
+[dev]
+  command = "npx http-server -p 8888"
+  port = 8888
